@@ -1,0 +1,322 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Review Your Booking - Hicks Artisan Grooming</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@300;400;500;600&amp;family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Playfair Display"', 'serif'],
+            sans: ['"Hanken Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            surface: '#f9f9f9',
+            surfaceDim: '#dadada',
+            primary: '#000000',
+            primaryDim: '#333333',
+            accent: '#c99b7b', // derived from image icons/labels
+            textMuted: '#6b7280',
+            buttonBg: '#8c9584', // derived from Confirm Booking button
+            buttonHover: '#7a8273',
+            "border-muted": "#E5E5E5",
+            "on-surface": "#1a1c1c",
+            "on-surface-variant": "#4c4546",
+          },
+          borderRadius: {
+            'custom': '1.5rem',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-utilities">
+    body {
+      background-color: #f9f9f9;
+      color: #1a1c1c;
+      /* Add subtle background pattern for glassmorphism to pop */
+      background-image: radial-gradient(#e5e5e5 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .icon-container {
+      background-color: #fcf6f1; /* Light peach/orange bg for icons */
+      color: #c09172; /* Icon color */
+    }
+  </style>
+</head>
+<body class="font-sans antialiased flex flex-col min-h-screen" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida/AP1WRLvQsb6Vz-h4lQUHtI3s0XtuaP7oGkwvgPXud3dblJFwd15lOkA_8Znr_5W7boP8oUEPq3qnOkwGp9DEwFxCgZ7pf_ebfDo3AVeW7eASWqpe3WcB_oDzukMoku_MLdUnmod4DWfOjUUDYmi0n-W39Z-a9jLox2e7ueHTI_yIUSazi6mqvq7AKD9Ssbty-cwfWpl_DlPViYJVW8keJ-WcGoCfI-AccpB9E1WuackMOQiGnt45POFMucbZM9Q&quot;); background-size: 40px 40px; background-repeat: repeat;">
+<!-- BEGIN: Header -->
+<header class="w-full bg-white/80 backdrop-blur-md border-b border-border-muted/50 sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+<div class="flex-shrink-0">
+<a class="text-3xl font-serif text-on-surface tracking-wide" href="#">HICKS</a>
+</div>
+<nav class="hidden md:flex items-center justify-center space-x-10">
+<a class="text-on-surface-variant hover:text-on-surface text-sm font-medium transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-on-surface text-sm font-medium transition-colors" href="#">Services</a>
+<a class="text-on-surface-variant hover:text-on-surface text-sm font-medium transition-colors" href="#">Locations</a>
+<a class="text-on-surface-variant hover:text-on-surface text-sm font-medium transition-colors" href="#">Gallery</a>
+<a class="text-on-surface-variant hover:text-on-surface text-sm font-medium transition-colors" href="#">Our Crew</a>
+</nav>
+<div class="flex-shrink-0">
+<a class="bg-[#8b917c] hover:bg-[#7a806b] text-white px-6 py-2.5 rounded-full text-sm font-medium transition-colors" href="#">Book Appointment</a>
+</div>
+</div>
+</header>
+<!-- END: Header -->
+<main class="flex-grow w-full max-w-[800px] mx-auto px-4 sm:px-6 py-12 md:py-20 flex flex-col items-center">
+<!-- BEGIN: MainHeader -->
+<div class="text-center mb-10 w-full max-w-3xl px-4">
+<p class="text-xs font-semibold tracking-[0.2em] text-[#c09172] uppercase mb-4">Almost There</p>
+<h1 class="text-5xl md:text-5xl font-serif text-gray-900">Review Your Booking</h1>
+</div>
+<!-- END: MainHeader -->
+<!-- BEGIN: BookingCard -->
+<div class="w-full bg-white/60 backdrop-blur-md rounded-custom border border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.02)] overflow-hidden mb-10">
+<!-- BEGIN: AppointmentDetails -->
+<section class="p-8 md:p-10">
+<h2 class="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-8">Appointment Details</h2>
+<div class="space-y-8">
+<!-- Service -->
+<div class="flex items-start gap-5">
+<div class="w-12 h-12 rounded-full icon-container flex items-center justify-center shrink-0">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<p class="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-1">ServiceS</p>
+<p class="text-[17px] font-serif text-gray-900 mb-0.5" id="display-service-name">Bridal Atelier Package</p>
+<p class="text-sm text-gray-500" id="display-service-details">packages · 6 hours</p>
+</div>
+</div>
+<!-- Location -->
+<div class="flex items-start gap-5">
+<div class="w-12 h-12 rounded-full icon-container flex items-center justify-center shrink-0">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<p class="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-1">Location</p>
+<p class="text-[17px] font-serif text-gray-900 mb-0.5" id="display-location-name">Élan Uptown</p>
+<p class="text-sm text-gray-500" id="display-location-address">450 Park Avenue, Upper East Side, New York, NY 10022</p>
+</div>
+</div>
+<!-- Artisan -->
+<div class="flex items-start gap-5">
+<div class="w-12 h-12 rounded-full icon-container flex items-center justify-center shrink-0">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<p class="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-1">Artisan</p>
+<p class="text-[17px] font-serif text-gray-900" id="display-artisan">No preference</p>
+</div>
+</div>
+<!-- When -->
+<div class="flex items-start gap-5">
+<div class="w-12 h-12 rounded-full icon-container flex items-center justify-center shrink-0">
+<svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div>
+<p class="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-1">When</p>
+<p class="text-[17px] font-serif text-gray-900" id="display-when">2026-08-12 at mid-day</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AppointmentDetails -->
+<hr class="border-gray-100">
+<!-- BEGIN: UserInformation -->
+<section class="p-8 md:p-10">
+<h2 class="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-6">Your Information</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<p class="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-1">Name</p>
+<p class="text-gray-900 text-[15px]" id="display-user-name">Rayyan</p>
+</div>
+<div>
+<p class="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-1">Phone</p>
+<p class="text-gray-900 text-[15px]" id="display-user-phone">03330262667</p>
+</div>
+<div class="md:col-span-2">
+<p class="text-xs font-semibold tracking-wider text-gray-400 uppercase mb-1">Email</p>
+<p class="text-gray-900 text-[15px]" id="display-user-email">raysomdieger69@gmail.com</p>
+</div>
+</div>
+</section>
+<!-- END: UserInformation -->
+<!-- BEGIN: BillSummary -->
+<section class="p-8 md:p-10 bg-[#fbfbfb]/50">
+<h2 class="text-xs font-semibold tracking-widest text-gray-400 uppercase mb-6">Bill Summary</h2>
+<div class="space-y-4 mb-8" id="bill-summary-items">
+<div class="flex justify-between items-center">
+<span class="text-gray-600 text-[15px]" id="bill-service-name">Bridal Atelier Package</span>
+<span class="text-gray-900 font-medium" id="bill-service-price">PKR 650</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-gray-500 text-[15px]">Booking Fee</span>
+<span class="text-gray-500">Waived</span>
+</div>
+</div>
+<hr class="border-gray-200 mb-6">
+<div class="flex justify-between items-center mb-8">
+<span class="text-[22px] font-serif text-gray-900">Total</span>
+<span class="text-[22px] font-serif text-gray-900" id="bill-total">PKR 650</span>
+</div>
+<div class="bg-white border border-gray-100 rounded-xl p-5 text-sm text-gray-500 leading-relaxed shadow-sm">
+<span class="font-semibold text-gray-800">Payment due at the salon.</span> The total amount will be collected in person after your service is complete. No online payment is required to confirm this booking.
+        </div>
+</section>
+<!-- END: BillSummary -->
+</div>
+<!-- BEGIN: ActionButtons -->
+<div class="flex flex-col sm:flex-row gap-4 items-center justify-center w-full max-w-3xl px-4">
+<button class="px-8 py-3.5 rounded-full border border-gray-300 bg-white/60 text-gray-700 font-medium hover:bg-gray-50 transition-colors w-full sm:w-auto text-[15px]">
+      Edit Booking
+    </button>
+<button class="px-8 py-3.5 rounded-full bg-[#8c9584] hover:bg-[#7a8273] text-white font-medium transition-colors flex items-center justify-center gap-2 w-full sm:w-auto text-[15px]">
+      Confirm Booking
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+<!-- END: ActionButtons -->
+</main>
+<!-- END: BookingCard -->
+<!-- BEGIN: Footer -->
+<footer class="bg-[#322f2c] text-[#f2ebe5] w-full mt-auto">
+<div class="max-w-7xl mx-auto px-6 py-16">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div>
+<h3 class="text-2xl font-serif mb-4">HICKS</h3>
+<p class="text-sm text-[#c2bcbb] mb-6">A scintillating experience with the best artisans bahawalpur has to offer.</p>
+<div class="flex gap-4">
+<a class="text-[#c2bcbb] hover:text-white transition-colors" href="#"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg></a>
+<a class="text-[#c2bcbb] hover:text-white transition-colors" href="#"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"></path></svg></a>
+<a class="text-[#c2bcbb] hover:text-white transition-colors" href="#"></a>
+</div>
+</div>
+<div>
+<h4 class="text-xs font-bold text-[#8b8786] uppercase tracking-wider mb-4">Explore</h4>
+<ul class="space-y-3 text-sm text-[#c2bcbb]">
+<li class=""><a class="hover:text-white transition-colors" href="#">Home</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Services</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Locations</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Gallery</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Our Crew</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold text-[#8b8786] uppercase tracking-wider mb-4">Visit</h4>
+<ul class="space-y-3 text-sm text-[#c2bcbb]">
+<li class=""><a class="hover:text-white transition-colors" href="#">Book Appointment</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Find a Branch</a></li>
+<li class=""></li>
+</ul>
+</div>
+<div>
+<h4 class="text-xs font-bold text-[#8b8786] uppercase tracking-wider mb-4">Contact</h4>
+<ul class="space-y-3 text-sm text-[#c2bcbb]"><li class="">hickssalon@gmail.com</li><li class="">062 2883145</li></ul>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        const rawData = localStorage.getItem('hicksBooking');
+        if (rawData) {
+            const bookingData = JSON.parse(rawData);
+            
+            // Map Services
+            if (bookingData.services && bookingData.services.length > 0) {
+                const serviceNames = bookingData.services.map(s => s.name || s).join(', ');
+                document.getElementById('display-service-name').innerText = serviceNames;
+                document.getElementById('bill-service-name').innerText = serviceNames;
+                
+                let totalPrice = 0;
+                bookingData.services.forEach(s => {
+                    if (s.price) totalPrice += Number(s.price);
+                });
+                
+                // Adjust for stylist tier if applicable
+                let tierMultiplier = 1;
+                if (bookingData.stylist && bookingData.stylist.toLowerCase().includes('executive')) {
+                    tierMultiplier = 1.2; // Example tier calculation
+                }
+                
+                const finalTotal = (totalPrice > 0 ? totalPrice : 650) * tierMultiplier;
+                
+                document.getElementById('bill-service-price').innerText = `PKR ${totalPrice || 650}`;
+                document.getElementById('bill-total').innerText = `PKR ${finalTotal}`;
+                
+                const durations = bookingData.services.map(s => s.duration).filter(Boolean);
+                if(durations.length > 0) {
+                   document.getElementById('display-service-details').innerText = `services · ${durations.join(', ')}`;
+                }
+            }
+
+            // Map Location
+            if (bookingData.location) {
+                const locName = bookingData.location.name || bookingData.location;
+                const locAddress = bookingData.location.address || '';
+                document.getElementById('display-location-name').innerText = locName;
+                if (locAddress) {
+                    document.getElementById('display-location-address').innerText = locAddress;
+                }
+            } else if (bookingData.branch) {
+                 const locName = bookingData.branch.name || bookingData.branch;
+                 const locAddress = bookingData.branch.address || '';
+                 document.getElementById('display-location-name').innerText = locName;
+                 if (locAddress) {
+                    document.getElementById('display-location-address').innerText = locAddress;
+                 }
+            }
+
+            // Map Artisan
+            if (bookingData.stylist) {
+                document.getElementById('display-artisan').innerText = bookingData.stylist;
+            } else if (bookingData.artisan) {
+                document.getElementById('display-artisan').innerText = bookingData.artisan;
+            }
+
+            // Map When
+            if (bookingData.date || bookingData.time) {
+                const dateStr = bookingData.date || '';
+                const timeStr = bookingData.time || '';
+                document.getElementById('display-when').innerText = `${dateStr} at ${timeStr}`.trim() || 'Date/Time not selected';
+            }
+
+            // Map Your Information
+            if (bookingData.personalDetails) {
+                const name = [bookingData.personalDetails.firstName, bookingData.personalDetails.lastName].filter(Boolean).join(' ');
+                if (name) document.getElementById('display-user-name').innerText = name;
+                if (bookingData.personalDetails.phone) document.getElementById('display-user-phone').innerText = bookingData.personalDetails.phone;
+                if (bookingData.personalDetails.email) document.getElementById('display-user-email').innerText = bookingData.personalDetails.email;
+            } else if (bookingData.userInfo) {
+                const name = [bookingData.userInfo.firstName, bookingData.userInfo.lastName, bookingData.userInfo.name].filter(Boolean).join(' ');
+                if (name) document.getElementById('display-user-name').innerText = name;
+                if (bookingData.userInfo.phone) document.getElementById('display-user-phone').innerText = bookingData.userInfo.phone;
+                if (bookingData.userInfo.email) document.getElementById('display-user-email').innerText = bookingData.userInfo.email;
+            }
+        }
+    } catch (e) {
+        console.error("Error loading booking data from localStorage", e);
+    }
+});
+</script>
+
+
+</body></html>

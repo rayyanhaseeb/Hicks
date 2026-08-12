@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Hicks - Locations</title>
+<!-- Google Fonts: Playfair Display -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols for Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            surface: '#f9f9f9',
+            'surface-dim': '#dadada',
+            'surface-container-low': '#f3f3f3',
+            'brand-dark': '#2a2a2a',
+            'brand-gray': '#555555',
+            'brand-accent': '#8a8a8a',
+            'brand-light': '#ffffff',
+            'button-bg': '#828e82',
+            'button-hover': '#6b776b',
+            'footer-bg': '#333333',
+          },
+          fontFamily: {
+            sans: ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          backgroundImage: {
+            'dotted-pattern': 'radial-gradient(circle, #e5e7eb 1px, transparent 1px)',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styles">
+    body {
+      background-color: theme('colors.surface');
+      color: theme('colors.brand-dark');
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .bg-dotted {
+      background-size: 20px 20px;
+      background-image: radial-gradient(circle, #d1d5db 1px, transparent 1px);
+    }
+
+    .icon-small {
+      font-size: 1.125rem;
+    }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen bg-dotted">
+<!-- BEGIN: Global Header -->
+<header class="w-full py-6 px-8 bg-surface/90 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200">
+<div class="max-w-7xl mx-auto flex justify-between items-center">
+<!-- Logo -->
+<a class="text-3xl font-serif tracking-widest text-brand-dark uppercase" href="#">Hicks</a>
+<!-- Navigation -->
+<nav class="hidden md:flex space-x-8 items-center text-sm tracking-wide text-brand-gray">
+<a class="hover:text-brand-dark transition-colors" href="#">Home</a>
+<a class="hover:text-brand-dark transition-colors" href="#">Services</a>
+<a class="text-brand-dark font-medium border border-gray-300 px-3 py-1 rounded-sm" href="#">Locations</a>
+<a class="hover:text-brand-dark transition-colors" href="#">Gallery</a>
+<a class="hover:text-brand-dark transition-colors" href="#">Our Crew</a>
+</nav>
+<!-- CTA Button -->
+<a class="hidden md:inline-block bg-button-bg hover:bg-button-hover text-white px-6 py-2.5 rounded-full text-sm font-medium tracking-wide transition-colors" href="#">
+        Book Appointment
+      </a>
+<!-- Mobile Menu Button (Placeholder) -->
+<button class="md:hidden text-brand-dark">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- END: Global Header -->
+<!-- BEGIN: Main Content -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+<!-- Section Header -->
+<div class="text-center mb-16 md:mb-24">
+<p class="text-sm font-semibold tracking-widest text-brand-accent uppercase mb-4">Visit Us</p>
+<h1 class="text-5xl md:text-6xl font-serif italic mb-6">Our Locations</h1>
+<p class="max-w-2xl mx-auto text-brand-gray leading-relaxed">Visit us at our branches — thoughtfully designed spaces so u can enjoy the same attention to detail, quality, and care wherever you go.</p>
+</div>
+<!-- Locations List -->
+<div class="space-y-16">
+<!-- Location Card 1: Downtown -->
+<div class="flex flex-col lg:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+<!-- Image -->
+<div class="lg:w-1/2 relative min-h-[300px] lg:min-h-[400px]">
+<img alt="Élan Downtown Interior" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfmv-Irds68evD3uDEtZbgyVsXi35llijrxTx7j0ey8VtQBlU2dmBLW3rFO5I-9AYKq-nqhweNXNY13Sd2NaAcS76QDVNckQllwMDSmgnI8KJ9cBm48Ox42jsIYjrOEXYdCO2K4eet2wf-CiZ0q_euPSod9mT9qnQoZ-Qx12wtjsKLiQinwHrdvVn68UlqtnMh0TgHtU_dn20dEwoHhCONt_qMhCFhJY5hjwAsEhtavKwL0lXmpXId_9LZ3JisFfLBY8c9hpyeQdegWg">
+</div>
+<!-- Content -->
+<div class="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+<h2 class="text-3xl font-serif mb-8 text-brand-dark">Hicks Kausar Colony</h2>
+<ul class="space-y-4 text-brand-gray mb-10">
+<li class="flex items-start">
+<span class="material-symbols-outlined icon-small mr-3 text-brand-accent mt-0.5">location_on</span>
+<span class="">-empty-</span>
+</li>
+<li class="flex items-center">
+<span class="material-symbols-outlined icon-small mr-3 text-brand-accent">call</span>
+<span class="">-empty-</span>
+</li>
+<li class="flex items-center">
+<span class="material-symbols-outlined icon-small mr-3 text-brand-accent">mail</span>
+<span class="">-empty-</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined icon-small mr-3 text-brand-accent mt-0.5">schedule</span>
+<span class="">-empty-</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-4">
+<a class="inline-flex items-center justify-center px-6 py-2.5 bg-button-bg hover:bg-button-hover text-white rounded-full text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] mr-2">near_me</span>
+              Get Directions
+            </a>
+<a class="inline-flex items-center justify-center px-6 py-2.5 border border-gray-300 hover:border-gray-400 text-brand-dark rounded-full text-sm font-medium transition-colors bg-white" href="#">
+              Book Here
+              <span class="material-symbols-outlined text-[18px] ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Location Card 2: Uptown -->
+<div class="flex flex-col lg:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+<!-- Image -->
+<div class="lg:w-1/2 relative min-h-[300px] lg:min-h-[400px]">
+<img alt="Élan Uptown Interior" class="absolute inset-0 w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy6UggXxYYhdasbiuFAcxdUeQZHWxQHDo45ZM4yJ7JcT1TsH8CD_gtk0A88i_23z9QYw_aHyHeiE5c2vzQmJjsGgaDi4EBJaTH5XY2j49L5ZglnKBmdDvntihAGEYKFcwbTy5QLpcEjWJJJdSoYw8NglblwDShS1oGeTzozUM2gEacbBV_iTslqNReQoN3dX-FiUmcGl5_h1wsjq9me6YMpl3nOrEKmINQWrzv9JeZubIwRBdrZ-MamguYsfbGWaHqaYvhLRZsNUhYRg">
+</div>
+<!-- Content -->
+<div class="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+<h2 class="text-3xl font-serif mb-8 text-brand-dark">Hicks Satellite Town</h2>
+<ul class="space-y-4 text-brand-gray mb-10">
+<li class="flex items-start">
+<span class="material-symbols-outlined icon-small mr-3 text-brand-accent mt-0.5">location_on</span>
+<span class="">-empty-</span>
+</li>
+<li class="flex items-center">
+<span class="material-symbols-outlined icon-small mr-3 text-brand-accent">call</span>
+<span class="">-empty-</span>
+</li>
+<li class="flex items-center">
+<span class="material-symbols-outlined icon-small mr-3 text-brand-accent">mail</span>
+<span class="">-empty-</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined icon-small mr-3 text-brand-accent mt-0.5">schedule</span>
+<span class="">-empty-</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-4">
+<a class="inline-flex items-center justify-center px-6 py-2.5 bg-button-bg hover:bg-button-hover text-white rounded-full text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] mr-2">near_me</span>
+              Get Directions
+            </a>
+<a class="inline-flex items-center justify-center px-6 py-2.5 border border-gray-300 hover:border-gray-400 text-brand-dark rounded-full text-sm font-medium transition-colors bg-white" href="#">
+              Book Here
+              <span class="material-symbols-outlined text-[18px] ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Location Card 3: Brooklyn -->
+<div class="flex flex-col lg:flex-row bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-100">
+<!-- Image -->
+<div class="lg:w-1/2 relative min-h-[300px] lg:min-h-[400px]">
+<img alt="Élan Brooklyn Interior" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD4JNZxY5lfi_zlb9is4GgN0kuhF6W2xPyBayA2-K4-gh-3rd5JaO0DjWQoATE9Sv2-JrbsXfhsUcWYAv96EY03vQmhWJbHzOWH3_Bxjgz1jDXBOl0W-NlRDQY9MVmyFbpDHUnfvkQK6bwX0tPqQ8rIiGotr4NjSMSg4ctiiQ1QePQLVd-RE7vneGOZeO7C114SitUBf79Yp0Hj8DMTtvZLCNXYa7lrw9qnN768cwBVWD_5zzCWZWDROcsIFRxJ8nLL5MkY-0xnqGIpQ">
+</div>
+<!-- Content -->
+<div class="lg:w-1/2 p-8 md:p-12 lg:p-16 flex flex-col justify-center">
+<h2 class="text-3xl font-serif mb-8 text-brand-dark">Hicks DHA Road</h2>
+<ul class="space-y-4 text-brand-gray mb-10">
+<li class="flex items-start">
+<span class="material-symbols-outlined icon-small mr-3 text-brand-accent mt-0.5">location_on</span>
+<span class="">-empty-</span>
+</li>
+<li class="flex items-center">
+<span class="material-symbols-outlined icon-small mr-3 text-brand-accent">call</span>
+<span class="">-empty-</span>
+</li>
+<li class="flex items-center">
+<span class="material-symbols-outlined icon-small mr-3 text-brand-accent">mail</span>
+<span class="">-empty-</span>
+</li>
+<li class="flex items-start">
+<span class="material-symbols-outlined icon-small mr-3 text-brand-accent mt-0.5">schedule</span>
+<span class="">-empty-</span>
+</li>
+</ul>
+<div class="flex flex-wrap gap-4">
+<a class="inline-flex items-center justify-center px-6 py-2.5 bg-button-bg hover:bg-button-hover text-white rounded-full text-sm font-medium transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px] mr-2">near_me</span>
+              Get Directions
+            </a>
+<a class="inline-flex items-center justify-center px-6 py-2.5 border border-gray-300 hover:border-gray-400 text-brand-dark rounded-full text-sm font-medium transition-colors bg-white" href="#">
+              Book Here
+              <span class="material-symbols-outlined text-[18px] ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- END: Main Content -->
+<!-- BEGIN: Global Footer -->
+<footer class="bg-footer-bg text-brand-light py-16 px-8 mt-auto">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+<!-- Brand Info -->
+<div class="md:col-span-1">
+<h3 class="text-3xl font-serif tracking-widest uppercase mb-4">Hicks</h3>
+<p class="text-sm text-gray-400 mb-6 leading-relaxed"><span style="color: rgb(194, 188, 187); font-family: &quot;Hanken Grotesk&quot;, sans-serif; background-color: rgb(50, 47, 44);" class="">A scintillating experience with the best artisans bahawalpur has to offer.</span></p>
+<div class="flex space-x-4"><a class="text-gray-400 hover:text-white transition-colors" href="#" aria-label="Instagram"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></a><a class="text-gray-400 hover:text-white transition-colors" href="#" aria-label="Facebook"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></a><a class="text-gray-400 hover:text-white transition-colors" href="#" aria-label="Twitter (X)"></a></div>
+</div>
+<!-- Explore Links -->
+<div>
+<h4 class="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-6">Explore</h4>
+<ul class="space-y-3 text-sm text-gray-300">
+<li class=""><a class="hover:text-white transition-colors" href="#">Home</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Services</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Locations</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Gallery</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Our Crew</a></li>
+</ul>
+</div>
+<!-- Visit Links -->
+<div>
+<h4 class="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-6">Visit</h4>
+<ul class="space-y-3 text-sm text-gray-300">
+<li class=""><a class="hover:text-white transition-colors" href="#">Book Appointment</a></li>
+<li class=""><a class="hover:text-white transition-colors" href="#">Find a Branch</a></li>
+<li class=""></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div>
+<h4 class="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-6">Contact</h4>
+<ul class="space-y-3 text-sm text-gray-300">
+<li class="">hickssalon@gmail.com</li>
+<li class="">062 2887643</li>
+</ul>
+</div>
+</div>
+<!-- Copyright border -->
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-gray-700 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+
+
+</div>
+</footer>
+<!-- END: Global Footer -->
+
+
+
+
+
+
+
+
+
+
+</body></html>
